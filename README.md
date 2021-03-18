@@ -1,5 +1,6 @@
 # SEREMPRE TEST FOR FRONTEND DEV
 Descripción del proyecto y proceso de desarrollo.
+Para visualizar el proyecto en desarrollo, puede visitar https://serempre-test.web.app
 
 ## DESCRIPCIÓN
 Este proyecto consta de una vista de producto para lo que pudiera ser una e-Commerce. El concepto es mostrar la infromación más completa y detallada incluyendo opciones a elegir entre sus posibles variantes. Mostrando como final un footer que permite ver en tiempo real el balance del costo.
