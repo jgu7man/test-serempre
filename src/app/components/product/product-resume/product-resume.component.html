@@ -1,0 +1,51 @@
+<div #container id="resume-container" [ngClass]="{'resume-active': toggleResume}">
+  <div class="container">
+    <i class="fas fa-times close"
+    (click)="keepDown = true"
+    (click)="toggleResume = false"
+    ></i>
+    <div class="row align-cols">
+
+
+      <!-- Order details -->
+      <div class="col s12 m6 hide-on-small-and-down" id="order-details">
+        <div class="row">
+          <!-- Ship details -->
+          <div class="col s12 l6" >
+            <p class="detail">
+              Free Shipping
+            </p>
+            <p class="description-detail hide-on-med-and-down data-text" >
+              Get 2-day free shipping anywhere in North America.
+            </p>
+          </div>
+          <div class="col s12 l6" *ngIf="warranty">
+            <p class="detail">
+              2 years warranty
+            </p>
+            <p class="description-detail hide-on-med-and-down data-text" >
+              If anything goes wrong in the first two years, we'll replace it for free.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call2action area -->
+      <div class="col s12 m6" id="call2action-area">
+        <div class="total-area">
+          <span class="total">$ {{order_.total}} </span><br>
+          <span class="financial-link data-text">
+            <a href="#" class="data-text">Need financing? Learn more</a>
+          </span>
+        </div>
+        <div class="pay-button">
+          <button class="accent">
+            Buy now
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

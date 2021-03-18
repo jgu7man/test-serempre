@@ -1,0 +1,21 @@
+@import "/src/assets/css/responsive.scss";
+#product-container {
+  padding-bottom: 15em;
+}
+
+#product-container {
+  position: relative;
+  #product-info.scrolled{
+    @include large {
+      position: relative;
+      left: 50%;
+    }
+  }
+  #product-carousel.scrolled {
+    @include large {
+      position: fixed;
+      top: 1em;
+      width: 42.5vw;
+    }
+  }
+}

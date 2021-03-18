@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "serempre-test": {
+      "hosting": {
+        "serempre-store": [
+          "serempre-test"
+        ]
+      }
+    }
+  }
+}

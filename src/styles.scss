@@ -1,1 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/responsive.css";
+@import "./assets/fonts/fonts.scss";
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  max-width:100vw;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Circular";
+  color: #111111
+}
+
+
+
+$primary: #EEEFF2;
+$secondary: #B6BCC6;
+$focus: #D8DCE0;
+$accent: #1E96D4;
+$accent-alt: #66BEEB;
+$hot: #CB253C;
+$data: #6B7280;
+
+
+/* TEXT STYLES */
+
+h1, .price {
+  font-weight: 800;
+  font-size: 33.18px;
+  margin: 0
+}
+
+h2 {
+  color: $data;
+  font-size: 27.65px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 14px;
+}
+
+
+.announcement {
+  font-size: 13.33px;
+  text-transform: uppercase;
+}
+
+.release {
+  color: $hot;
+}
+
+.descriptions {
+  color: $data
+}
+
+.section-title {
+  font-size: 19.2px;
+  margin-bottom: .3em;
+}
+
+.option-title {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.data-text {
+  color: $data
+}
+
+
+/* ELEMENTS STYLES */
+
+@mixin bordered{
+  $border: 3px solid;
+  border: $border $primary;
+  &:hover{
+    border:$secondary $border;
+  }
+  &:focus {
+    border:$secondary $border;
+    box-shadow: 0 0 0 4px $focus;
+  }
+  &.selected {
+    border:$accent $border;
+  }
+}
+
+
+
+.bordered {
+  @include bordered;
+  border-radius: 8px;
+}
+
+@mixin accent {
+  color: #fff;
+  &:hover{
+    background-color:$accent-alt;
+  }
+  &:focus {
+    border:$focus 3px solid;
+  }
+}
+
+.accent {
+  background-color:$accent;
+  @include accent
+}
+
+.feature-icon {
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  i {
+    font-size: 2em;
+  }
+}
+
+.selectable-option {
+  padding: 20px;
+  margin-bottom: 20px;
+  .row {
+    margin: 0
+  }
+}
+
+
+button {
+  border: none;
+  padding: 20px 26px;
+  border-radius: 8px;
+  font-size: 1em;
+  margin: .5em 0;
+}

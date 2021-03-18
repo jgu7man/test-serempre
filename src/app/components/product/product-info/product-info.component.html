@@ -1,0 +1,21 @@
+
+<div class="row">
+  <div class="col s12">
+    <p class="announcement release" *ngIf="product.isNew">NEW RELEASE</p>
+  </div>
+  <div class="col s12">
+    <h1> {{product.title}} </h1>
+  </div>
+  <div class="col s12">
+    <h2> {{product.shortDescription}} </h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12">
+    <p class="announcement">STARING AT</p>
+    <p class="price">
+      ${{product.price}}
+    </p>
+  </div>
+</div>
+

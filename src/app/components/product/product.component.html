@@ -1,0 +1,32 @@
+<div class="container" id="product-container">
+  <div class="row" *ngIf="(product | async ) as product" id="product-container">
+    <div class="col s12 m12 l6" [ngClass]="{'scrolled': toggleFixed}" id="product-carousel">
+      <!--Image Carousel -->
+      <gzm-product-carrousel
+      [productImages]="product.images"
+      [iconFeatures]="product.iconFeatures"
+      ></gzm-product-carrousel>
+
+
+    </div>
+    <div class="col s12 m12 l6" [ngClass]="{'scrolled': toggleFixed}" id="product-info">
+      <!-- Product Info -->
+      <gzm-product-info [product]="product" ></gzm-product-info>
+
+      <!-- Product Overviews -->
+      <gzm-product-description
+      [description]="product.description"
+      [iconFeatures]="product.iconFeatures"
+      ></gzm-product-description>
+
+      <!-- Product Varibales -->
+      <gzm-product-options *ngFor="let variable of product.variables" [variable]="variable" ></gzm-product-options>
+
+      <!-- Product Details -->
+      <gzm-product-details [details]="product.details"></gzm-product-details>
+
+    </div>
+    <!-- Product Resume -->
+    <gzm-product-resume [product]="product"></gzm-product-resume>
+  </div>
+</div>

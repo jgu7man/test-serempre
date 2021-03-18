@@ -1,0 +1,34 @@
+@import "/src/assets/css/responsive.scss";
+
+.product-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height:100%
+  }
+}
+
+
+
+.img-selected {
+  @include small{
+    height: calc(90vw * .61);
+  }
+  @include large{
+    height: calc(100vw * .25);
+  }
+}
+
+.carousel-item {
+  cursor: pointer;
+  @include small{
+    height: calc(32vw * .61);
+  }
+  @include large{
+    height: calc(100vw * .1);
+  }
+}

@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col s12">
+    <div id="tabs">
+      <div class="tab" *ngFor="let desc of description; let i = index"
+      (click)="onSelectTab(i)"
+      [ngClass]="{'selected': tabSelected == i}"
+      >
+        <span class="data-text" > {{desc.title}} </span>
+      </div>
+    </div>
+    <div class="selected-indicator"
+    [ngStyle]="{'left': defineSelectorPosition()}"
+    ></div>
+  </div>
+  <div class="col s12" id="content">
+    <p class="data-text">{{content}}</p>
+  </div>
+</div>
+<gzm-product-features-icons
+[features]="iconFeatures"
+class="hide-on-med-and-up"
+></gzm-product-features-icons>

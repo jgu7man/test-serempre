@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col s12">
+    <h4 class="section-title">
+      {{variable.title}}
+    </h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m6" *ngFor="let item of variable.options; let i=index">
+    <div class="selectable-option bordered"
+    (click)="onSelectOption(i, variable.name, item)"
+    [ngClass]="{'selected': i == optionSelected}"
+    >
+      <div class="row align-cols">
+        <div class="col" [ngClass]="{'s9 m10 l11': item.price > 0, 's12': item.price == 0}">
+          <p class="option-title"> {{item.option}} </p>
+          <p class="data-text"> {{item.description}} </p>
+        </div>
+        <div class="col s3 m2 l1" *ngIf="item.price > 0">
+          <p class="option-title"> + ${{item.price}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

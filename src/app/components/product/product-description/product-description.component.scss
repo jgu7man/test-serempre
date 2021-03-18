@@ -1,0 +1,30 @@
+#tabs {
+  display: flex;
+  flex-flow: row wrap;
+  .tab {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    font-size: 19.2px;
+    font-weight: 600;
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+.tab.selected span {
+  color: #111111 !important
+}
+.selected-indicator {
+  width: 33%;
+  border-bottom: solid;
+  position: relative;
+  transition: all 0.3 ease-out
+}
+
+#content {
+  p {
+    font-size: 16px;
+  }
+}

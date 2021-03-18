@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col s12">
+    <!-- Image Selected -->
+    <div class="product-img img-selected bordered">
+      <img [src]="productImages[imageSelected].src">
+    </div>
+  </div>
+</div>
+
+<!-- Product Images list -->
+<div class="row">
+  <div class="col s4" *ngFor="let image of productImages; let i=index">
+    <div class="product-img carousel-item bordered"
+    [ngClass]="{'selected': i == imageSelected}"
+    (click)="selectImage(i)">
+      <img [src]="image.src" [alt]="image.alt">
+    </div>
+  </div>
+</div>
+<gzm-product-features-icons
+[features]="iconFeatures"
+class="hide-on-small-and-down"
+></gzm-product-features-icons>
